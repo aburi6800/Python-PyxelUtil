@@ -128,8 +128,6 @@ class PyxelUtil:
     @staticmethod
     def text(x, y, txt, color=7):  
 
-        print(txt)
-
         for i in range(len(txt)):
             if txt[i][0] == "*":
                 t = txt[i].replace("*", "")
@@ -143,3 +141,8 @@ class PyxelUtil:
                 pyxel.pal(7, color)
                 pyxel.blt(x, y - 1, 0, fontx, fonty, 7, 6, 0)
                 x = x + 8
+
+
+if __name__ == "__main__":
+    pyxel.init(192, 192)
+    pyxel.show()
